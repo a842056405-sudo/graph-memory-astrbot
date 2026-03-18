@@ -1,0 +1,47 @@
+{
+  "compact_turn_count": {
+    "description": "触发自动压缩的轮次阈值",
+    "type": "int",
+    "default": 6,
+    "hint": "达到该轮次后自动触发一次图谱压缩"
+  },
+  "recall_max_nodes": {
+    "description": "每次召回注入的最大节点数",
+    "type": "int",
+    "default": 6,
+    "hint": "数值越大，注入上下文越多，token 消耗也越高"
+  },
+  "recall_max_depth": {
+    "description": "图遍历最大深度",
+    "type": "int",
+    "default": 2,
+    "hint": "用于控制从种子节点向外扩展的跳数"
+  },
+  "pagerank_damping": {
+    "description": "个性化 PageRank 阻尼系数",
+    "type": "float",
+    "default": 0.85
+  },
+  "pagerank_iterations": {
+    "description": "个性化 PageRank 迭代次数",
+    "type": "int",
+    "default": 20
+  },
+  "vector_sync_limit": {
+    "description": "每轮向量同步节点上限",
+    "type": "int",
+    "default": 40,
+    "hint": "用于控制每次压缩或维护时最多更新多少条向量"
+  },
+  "vector_dedup_threshold": {
+    "description": "向量去重相似度阈值",
+    "type": "float",
+    "default": 0.9,
+    "hint": "值越高越保守，建议 0.85~0.95"
+  },
+  "vector_dedup_max_pairs": {
+    "description": "每轮去重最多比较并处理的候选对数",
+    "type": "int",
+    "default": 20
+  }
+}

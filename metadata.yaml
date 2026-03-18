@@ -1,0 +1,6 @@
+name: astrbot_plugin_graph_memory
+display_name: Graph Memory
+desc: 知识图谱记忆插件 - 从对话中提取结构化三元组，实现跨会话记忆召回与上下文压缩
+author: adoresever
+version: 1.0.0
+repo: https://github.com/adoresever/graph-memory
