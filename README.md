@@ -46,24 +46,6 @@
    - `__init__.py`
 3. 重启 AstrBot，确认日志出现 `"[GraphMemory] 插件已加载"`。
 
-### 发布打包与安装自检（避免“目录名无效”）
-
-仓库根目录提供了 `release_pack.py`，用于统一生成标准插件目录与安装包。
-
-1. 生成标准目录与 zip 安装包：
-
-```bash
-python release_pack.py build --plugin-dir . --dist-dir dist --zip
-```
-
-2. 对打包结果执行自检：
-
-```bash
-python release_pack.py check --plugin-dir dist/astrbot_plugin_graph_memory
-```
-
-3. 安装时优先使用 `dist/astrbot_plugin_graph_memory.zip`，避免手工改名导致目录不一致。
-
 ## Embedding 配置（可选但推荐）
 
 本插件优先使用 AstrBot 已配置的 Embedding Provider：
